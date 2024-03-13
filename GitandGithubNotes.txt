@@ -1,0 +1,146 @@
+git clone https://github.com/KotaVeeraReddy/Scaler-Sessions.git
+
+
+cls -----> To clear the screen in CMD.
+
+cd ----> To change a directory.
+
+mkdir ----> To create a new directory.
+
+dir ----> To list the files in current directory.
+
+
+In CMD/Power shell -----> git --version/git ---> To check whether Git is installed or not in Windows/Mac.
+
+git config  ----> To see the Git config list.
+
+git config --global --list  -----> To see global values.
+
+C:\Users\kotav\OneDrive\Desktop\GitPractice>git config --local --list
+fatal: --local can only be used inside a git repository
+
+
+git config --global user.name "Veera Reddy Kota"
+
+git config --global user.email "kotaveerareddy@gmail.com"
+
+
+git init ---> To make/initialize the folder as a Git repository. So, that the Git tracks the changes.
+
+C:\Users\kotav\OneDrive\Desktop\GitPractice>rm -rf .git
+'rm' is not recognized as an internal or external command,
+operable program or batch file.    -----> To delete a file or Folder. But, not working.
+
+git init -b main  --- > To initialize a Local git repository with default branch as main not master.
+
+git add FirstCode.txt  ------> To add individual files to Staging area.
+
+C:\Users\kotav\OneDrive\Desktop\GitPractice>git log
+fatal: your current branch 'main' does not have any commits yet   -----> To see all the Local Commit history.
+
+
+git commit ----> Without message will give us an error.
+
+git commit -m "My First Commit"  ---> To commit any files staged to Local repository.
+
+C:\Users\kotav\OneDrive\Desktop\GitPractice>git commit -m "My First Commit"
+[main (root-commit) 04cd33f] My First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 FirstCode.txt
+ 
+ 04cd33f  ----> commit ID basically 40 characters long. But, giving us only first 7 characters.
+ 
+ >git log
+commit 04cd33fa74cd3851bfb1fde4bfaee66ada1e9849 (HEAD -> main)
+Author: Kota Veera Reddy <kotaveerareddy@gmail.com>
+Date:   Wed Mar 13 12:48:13 2024 +0530
+
+    My First Commit
+	
+	
+	
+git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   FirstCode.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+git restore FirstCode.txt    ----> To restore a file which is just modified and not staged. To reverse the changes.
+
+
+git commit -a -m "My Third Commit"  ----> To directly commit instead of staging and then committing the files to Local repository.
+
+git diff -----> To see what all changes we made to the Local files before staging and committing. Only works for the files in Working directory.
+
+git diff --staged --> Works for the staged files. Just git diff won't work here.
+
+
+git add FirstCode.txt,Creds.txt,Readme.md/git add ./git add --a  ---> To add multiple files to the Staging area at once.
+
+git rm --cached Creds.txt --- > To remove a file  from Local repository after committing for sensitive files.
+
+git clone <Central Repository URL> ----> To clone any project for the first time from the Github.
+
+ls ---> To see the list of files/folders from Mac system.
+
+echo "# Git-Practice demo" >> README.md  --- > To create a file and write to that file using CMD command.
+
+more README.md ----> To read a file content from the Command Prompt using Command. In Mac, cat README.md.
+
+ls -a ----> To see all the files from a directory in Mac even the hidden files.
+
+git branch -M main ----> To create a branch with that Name.
+
+git add README.md  ---> To stage a file to the staging area.
+
+git push -u origin main ----> To push code directly to the main branch.
+
+ssh-keygen -o ---> For generating a file for SSH Authentication. Only one time set up.
+
+git remote add origin git@github.com:KotaVeeraReddy/Git-Practice.git  ---> For connecting our local repository with the Github central repository.
+
+git push -u origin main ---> For pushing the files from local repository to central repository and -u means the upstream to that branch we're pushing.
+
+git push origin main ---> If we don't want to set up the Upstream and just want to push the file.
+
+C:\Users\kotav\OneDrive\Desktop\Git-Practice>git remote -v
+origin  git@github.com:KotaVeeraReddy/Git-Practice.git (fetch)
+origin  git@github.com:KotaVeeraReddy/Git-Practice.git (push)   ---> To see the URLs used for pulling and pushing the file Local to Central and vice-versa.
+
+git tag ----> To see all the tags available for a particular project or repository.
+
+git tag -a v1.0 -m "First release" ----> git tag -a (for annotated tagging) v1.0 or just 1.0 -m "First release"git tag -a (for annotated tagging) v1.0 or just 1.0 -m "First release" ---> For adding a tag to the project.
+
+git show v1.0 ---> To see a detailed info about a particular tag.	
+
+git push origin v1.0   ---> To push to central along with tag.
+
+Press q ---> To stop seeing all the Logs in case if the list is huge.
+
+
+
+git log --pretty=oneline ---> To see all the log history in one line(In a beautiful way)
+
+
+git checkout -b/--branch feature-101  ----> To create a new branch and check out to that branch.
+
+git switch -c feature-102 ---> Using Switch command to create and switch to that branch.
+
+git branch ---> To see the list of branches
+
+git branch --all ----> To see both Local and remote branches list.
+
+git switch -    -----> To switch back to lastly switched branch.
+
+git branch -d feature-102 ----> To delete a branch.
+
+**********************Always take the latest code from central repository before merging the branches using git pull origin main *************************
+
+git merge feature-101 ---> To merge two branches. First we need to be in one particular branch and give the other branch name that we want to merge here.
+
+git graph entension to see the graph of branches in VS-Code
+
