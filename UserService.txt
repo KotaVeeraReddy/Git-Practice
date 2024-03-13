@@ -1,1 +1,5 @@
 "#Second Text file. Just for practice" 
+
+Get the User data and
+
+Process the data.
